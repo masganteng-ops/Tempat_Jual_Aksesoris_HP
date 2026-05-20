@@ -1,287 +1,300 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rekomendasi Aksesoris HP</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }body {
-  background: #f4f6f9;
-  color: #333;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechAcc Store</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-header {
-  background: linear-gradient(135deg, #0f172a, #2563eb);
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
+body{
+background:#f4f6f9;
+color:#333;
 }
 
-header h1 {
-  font-size: 38px;
-  margin-bottom: 10px;
+header{
+background:linear-gradient(135deg,#0f172a,#2563eb);
+color:white;
+text-align:center;
+padding:40px 20px;
 }
 
-header p {
-  font-size: 18px;
-  opacity: 0.9;
+header h1{
+font-size:38px;
+margin-bottom:10px;
 }
 
-nav {
-  background: #111827;
-  padding: 15px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+nav{
+background:#111827;
+padding:15px;
+text-align:center;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: 0.3s;
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
 }
 
-nav a:hover {
-  color: #60a5fa;
+.hero{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:center;
+padding:50px 20px;
+gap:30px;
+background:white;
 }
 
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 20px;
-  gap: 30px;
-  background: white;
+.hero-text{
+max-width:500px;
 }
 
-.hero-text {
-  max-width: 500px;
+.hero-text h2{
+font-size:34px;
+margin-bottom:15px;
+color:#1e3a8a;
 }
 
-.hero-text h2 {
-  font-size: 34px;
-  margin-bottom: 15px;
-  color: #1e3a8a;
+.hero-text p{
+line-height:1.7;
+margin-bottom:20px;
 }
 
-.hero-text p {
-  line-height: 1.7;
-  margin-bottom: 20px;
+.hero-text button{
+padding:12px 24px;
+border:none;
+background:#2563eb;
+color:white;
+border-radius:8px;
+cursor:pointer;
 }
 
-.hero-text button {
-  padding: 12px 24px;
-  border: none;
-  background: #2563eb;
-  color: white;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+.hero img{
+width:350px;
+border-radius:20px;
 }
 
-.hero-text button:hover {
-  background: #1d4ed8;
+.section-title{
+text-align:center;
+margin:50px 0 20px;
+font-size:32px;
+color:#1e3a8a;
 }
 
-.hero img {
-  width: 350px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:20px 40px 50px;
 }
 
-.section-title {
-  text-align: center;
-  margin: 50px 0 20px;
-  font-size: 32px;
-  color: #1e3a8a;
+.card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:.3s;
 }
 
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  padding: 20px 40px 50px;
+.card:hover{
+transform:translateY(-8px);
 }
 
-.card {
-  background: white;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: 0.3s;
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
 }
 
-.card:hover {
-  transform: translateY(-8px);
+.card-content{
+padding:20px;
 }
 
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
+.card-content h3{
+margin-bottom:10px;
+color:#1e40af;
 }
 
-.card-content {
-  padding: 20px;
+.price{
+color:#dc2626;
+font-size:20px;
+font-weight:bold;
+margin:10px 0;
 }
 
-.card-content h3 {
-  margin-bottom: 10px;
-  color: #1e40af;
+.card-content button{
+width:100%;
+padding:10px;
+border:none;
+background:#2563eb;
+color:white;
+border-radius:8px;
+cursor:pointer;
 }
 
-.price {
-  color: #dc2626;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 10px 0;
+.about{
+background:white;
+margin:40px;
+padding:40px;
+border-radius:20px;
+text-align:center;
+line-height:1.8;
 }
 
-.card-content button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  background: #2563eb;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:20px;
 }
-
-.card-content button:hover {
-  background: #1d4ed8;
-}
-
-.about {
-  background: white;
-  margin: 40px;
-  padding: 40px;
-  border-radius: 20px;
-  text-align: center;
-  line-height: 1.8;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-footer {
-  background: #111827;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-  }
-
-  .hero img {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .products {
-    padding: 20px;
-  }
-
-  .about {
-    margin: 20px;
-  }
-}
-
-  </style>
+</style>
 </head>
-<body>  <header>
-    <h1>TechAcc Store</h1>
-    <p>Rekomendasi Aksesoris HP Terbaik dan Kekinian</p>
-  </header>  <nav>
-    <a href="#home">Home</a>
-    <a href="#produk">Produk</a>
-    <a href="#tentang">Tentang</a>
-  </nav>  <section class="hero" id="home">
-    <div class="hero-text">
-      <h2>Aksesoris HP Modern & Berkualitas</h2>
-      <p>
-        Temukan berbagai aksesoris HP terbaik seperti headset gaming, charger fast charging, power bank, dan casing premium dengan harga terjangkau.
-      </p>
-      <button onclick="scrollToProducts()">Lihat Produk</button>
-    </div><img src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg" alt="Aksesoris HP">
 
-  </section>  <h2 class="section-title" id="produk">Produk Rekomendasi</h2>  <section class="products"><div class="card">
-  <img src="https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg" alt="Headset">
-  <div class="card-content">
-    <h3>Headset Gaming</h3>
-    <p>Suara jernih dengan bass kuat untuk gaming dan musik.</p>
-    <div class="price">Rp120.000</div>
-    <a href="https://shopee.co.id/search?keyword=headset%20gaming" target="_blank"><button>Beli Sekarang</button></a>
-  </div>
+<body>
+
+<header>
+<h1>TechAcc Store</h1>
+<p>Rekomendasi Aksesoris HP Terbaik dan Kekinian</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#produk">Produk</a>
+<a href="#tentang">Tentang</a>
+</nav>
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+<h2>Aksesoris HP Modern & Berkualitas</h2>
+
+<p>
+Temukan berbagai aksesoris HP terbaik seperti headset gaming,
+power bank, fast charger, casing premium dan TWS modern.
+</p>
+
+<button onclick="scrollToProducts()">
+Lihat Produk
+</button>
+
+</div>
+
+<img src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg" alt="Aksesoris HP">
+
+</section>
+
+<h2 class="section-title" id="produk">
+Produk Rekomendasi
+</h2>
+
+<section class="products">
+
+<div class="card">
+<img src="https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg" alt="Headset">
+
+<div class="card-content">
+<h3>Headset Gaming</h3>
+<p>Suara jernih dengan bass kuat untuk gaming dan musik.</p>
+<div class="price">Rp120.000</div>
+
+<a href="headset.html">
+<button>Lihat Detail</button>
+</a>
+
+</div>
 </div>
 
 <div class="card">
-  <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?q=80&w=1000&auto=format&fit=crop" alt="Power Bank">
-  <div class="card-content">
-    <h3>Power Bank</h3>
-    <p>Kapasitas besar cocok untuk perjalanan jauh.</p>
-    <div class="price">Rp180.000</div>
-    <a href="https://shopee.co.id/search?keyword=powerbank" target="_blank"><button>Beli Sekarang</button></a>
-  </div>
+<img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?q=80&w=1000&auto=format&fit=crop" alt="Power Bank">
+
+<div class="card-content">
+<h3>Power Bank</h3>
+<p>Kapasitas besar cocok untuk perjalanan jauh.</p>
+<div class="price">Rp180.000</div>
+
+<a href="powerbank.html">
+<button>Lihat Detail</button>
+</a>
+
+</div>
 </div>
 
 <div class="card">
-  <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?q=80&w=1000&auto=format&fit=crop" alt="Fast Charger">
-  <div class="card-content">
-    <h3>Fast Charger</h3>
-    <p>Pengisian cepat dan aman untuk semua smartphone.</p>
-    <div class="price">Rp95.000</div>
-    <a href="https://shopee.co.id/search?keyword=fast%20charger" target="_blank"><button>Beli Sekarang</button></a>
-  </div>
+<img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?q=80&w=1000&auto=format&fit=crop" alt="Fast Charger">
+
+<div class="card-content">
+<h3>Fast Charger</h3>
+<p>Pengisian cepat dan aman untuk semua smartphone.</p>
+<div class="price">Rp95.000</div>
+
+<a href="charger.html">
+<button>Lihat Detail</button>
+</a>
+
+</div>
 </div>
 
 <div class="card">
-  <img src="https://images.unsplash.com/photo-1601593346740-925612772716?q=80&w=1000&auto=format&fit=crop" alt="Casing HP">
-  <div class="card-content">
-    <h3>Casing Premium</h3>
-    <p>Melindungi HP dengan desain elegan dan modern.</p>
-    <div class="price">Rp75.000</div>
-    <a href="https://shopee.co.id/search?keyword=casing%20hp" target="_blank"><button>Beli Sekarang</button></a>
-  </div>
+<img src="https://images.unsplash.com/photo-1601593346740-925612772716?q=80&w=1000&auto=format&fit=crop" alt="Casing HP">
+
+<div class="card-content">
+<h3>Casing Premium</h3>
+<p>Melindungi HP dengan desain elegan dan modern.</p>
+<div class="price">Rp75.000</div>
+
+<a href="casing.html">
+<button>Lihat Detail</button>
+</a>
+
+</div>
 </div>
 
 <div class="card">
-  <img src="https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg" alt="TWS Bluetooth">
-  <div class="card-content">
-    <h3>TWS Bluetooth</h3>
-    <p>Earbuds wireless modern dengan kualitas suara jernih.</p>
-    <div class="price">Rp150.000</div>
-    <a href="https://shopee.co.id/search?keyword=tws%20bluetooth" target="_blank"><button>Beli Sekarang</button></a>
-  </div>
+<img src="https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg" alt="TWS Bluetooth">
+
+<div class="card-content">
+<h3>TWS Bluetooth</h3>
+<p>Earbuds wireless modern dengan kualitas suara jernih.</p>
+<div class="price">Rp150.000</div>
+
+<a href="tws.html">
+<button>Lihat Detail</button>
+</a>
+
+</div>
 </div>
 
-  </section>  </section>  <section class="about" id="tentang">
-    <h2>Tentang Website</h2>
-    <p>
-      Website ini dibuat untuk memberikan rekomendasi aksesoris HP terbaik dengan tampilan modern dan mudah digunakan. Cocok digunakan sebagai tugas sekolah maupun inspirasi toko online sederhana.
-    </p>
-  </section>  <footer>
-    <p>© 2026 TechAcc Store | Website Aksesoris HP</p>
-  </footer>  <script>
-    function beliProduk(namaProduk) {
-      alert('Anda memilih produk: ' + namaProduk);
-    }
+</section>
 
-    function scrollToProducts() {
-      document.getElementById('produk').scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  </script></body>
+<section class="about" id="tentang">
+<h2>Tentang Website</h2>
+
+<p>
+Website ini dibuat untuk memberikan rekomendasi aksesoris HP terbaik
+ dengan tampilan modern dan mudah digunakan.
+</p>
+
+</section>
+
+<footer>
+<p>© 2026 TechAcc Store</p>
+</footer>
+
+<script>
+function scrollToProducts(){
+document.getElementById('produk').scrollIntoView({
+behavior:'smooth'
+});
+}
+</script>
+
+</body>
 </html>
