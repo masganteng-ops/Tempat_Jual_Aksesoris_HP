@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AccesSmart - Aksesoris HP</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f4f4;
+      color:#333;
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 50px;
+      background:#111;
+      color:white;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:25px;
+      font-weight:bold;
+      color:orange;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:orange;
+    }
+
+    .hero{
+      height:90vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:50px;
+      margin-bottom:15px;
+    }
+
+    .hero p{
+      font-size:18px;
+      margin-bottom:25px;
+    }
+
+    .hero button{
+      padding:12px 25px;
+      border:none;
+      background:orange;
+      color:white;
+      font-size:16px;
+      border-radius:8px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .hero button:hover{
+      background:darkorange;
+    }
+
+    .produk{
+      padding:60px 40px;
+      text-align:center;
+    }
+
+    .produk h2{
+      font-size:38px;
+      margin-bottom:40px;
+    }
+
+    .card-container{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      width:300px;
+      border-radius:15px;
+      overflow:hidden;
+      box-shadow:0 5px 12px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card h3{
+      margin:15px 0 10px;
+    }
+
+    .card p{
+      padding:0 15px;
+      margin-bottom:15px;
+    }
+
+    .harga{
+      display:block;
+      color:orange;
+      font-size:20px;
+      font-weight:bold;
+      margin-bottom:20px;
+    }
+
+    .tentang,
+    .kontak{
+      padding:60px 40px;
+      text-align:center;
+      background:white;
+    }
+
+    .tentang h2,
+    .kontak h2{
+      margin-bottom:20px;
+      font-size:35px;
+    }
+
+    footer{
+      background:#111;
+      color:white;
+      text-align:center;
+      padding:15px;
+    }
+
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:10px;
+      }
+
+      .hero h1{
+        font-size:35px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">AccesSmart</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#produk">Produk</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div>
+      <h1>Rekomendasi Aksesoris HP Terbaik</h1>
+
+      <p>
+        Temukan berbagai aksesoris HP modern, berkualitas,
+        dan harga terjangkau.
+      </p>
+
+      <button onclick="promo()">
+        Lihat Promo
+      </button>
+    </div>
+  </section>
+
+  <section class="produk" id="produk">
+
+    <h2>Produk Unggulan</h2>
+
+    <div class="card-container">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1587033411391-5d9e51cce126?q=80&w=800&auto=format&fit=crop">
+
+        <h3>Case HP Premium</h3>
+
+        <p>
+          Melindungi smartphone dengan desain elegan dan modern.
+        </p>
+
+        <span class="harga">
+          Rp50.000
+        </span>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517420879524-86d64ac2f339?q=80&w=800&auto=format&fit=crop">
+
+        <h3>Headset Bluetooth</h3>
+
+        <p>
+          Suara jernih dan nyaman digunakan sehari-hari.
+        </p>
+
+        <span class="harga">
+          Rp120.000
+        </span>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?q=80&w=800&auto=format&fit=crop">
+
+        <h3>Powerbank Fast Charging</h3>
+
+        <p>
+          Kapasitas besar dengan pengisian daya super cepat.
+        </p>
+
+        <span class="harga">
+          Rp150.000
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="tentang" id="tentang">
+
+    <h2>Tentang Kami</h2>
+
+    <p>
+      AccesSmart adalah website rekomendasi penjualan
+      aksesoris HP yang menyediakan produk berkualitas
+      seperti headset, case HP, charger, kabel data,
+      dan powerbank modern.
+    </p>
+
+  </section>
+
+  <section class="kontak" id="kontak">
+
+    <h2>Kontak</h2>
+
+    <p>Email : accessmart@gmail.com</p>
+    <br>
+    <p>WhatsApp : 0812-3456-7890</p>
+
+  </section>
+
+  <footer>
+    <p>© 2026 AccesSmart | Website Aksesoris HP</p>
+  </footer>
+
+  <script>
+    function promo(){
+      alert("Promo spesial! Diskon hingga 30% untuk semua aksesoris HP!");
+    }
+  </script>
+
+</body>
+</html>
